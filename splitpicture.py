@@ -1,4 +1,5 @@
 #coding:gbk
+#python3.4.0
 def show_fig(img, data):
     figure, ax = plt.subplots(ncols=1, nrows=1, figsize=(6, 6))
     ax.imshow(img)
