@@ -133,6 +133,7 @@ def extract_images():
     ret,img=cv2.threshold(img1,93,255,cv2.THRESH_BINARY)#阈值93去噪，以上两句是去掉在格子笔记本上写数字的格子背景
     
     #下边这些代码是去噪之后的图片后重新读取，如果不这样做，selective_search会报错，因为不能连续灰度化两次输出给selective_search
+    cv2.imwrite(image_path,img)
     cv2.imshow('image', img)
     img = cv2.imread(image_path)
     
